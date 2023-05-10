@@ -39,6 +39,13 @@ module.exports = () => {
         background_color: "#225ca3",
         start_url: "/",
         publicPath: "/",
+        icons: [
+          {
+            src: path.resolve("src/images/logo.png"),
+            size: [96, 128, 192, 512],
+            destination: path.join("assets", "icons"),
+          },
+        ],
       }),
     ],
 
@@ -54,7 +61,6 @@ module.exports = () => {
           use: {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset.env"],
               plugins: [
                 "@babel/plugin-proposal-object-rest-spread",
                 "@babel/transform-runtime",
